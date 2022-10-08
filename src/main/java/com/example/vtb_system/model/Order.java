@@ -7,13 +7,15 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 import java.sql.Timestamp;
 
 @Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class Orders {
+@Table(name = "orders")
+public class Order {
     @Id
     @Column(name = "id", nullable = false)
     private Long id;

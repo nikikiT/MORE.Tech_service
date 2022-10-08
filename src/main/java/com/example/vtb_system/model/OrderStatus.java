@@ -14,7 +14,8 @@ import java.util.Set;
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class OrderStatuses {
+@Table(name = "order_status")
+public class OrderStatus {
     @Id
     @Column(name = "id", nullable = false)
     private Long id;
@@ -27,6 +28,6 @@ public class OrderStatuses {
             name = "order_lots",
             joinColumns = @JoinColumn(name = "order_id"),
             inverseJoinColumns = @JoinColumn(name = "lot_id"))
-    Set<MarketLots> likedCourses;
+    Set<MarketLot> likedCourses;
 
 }

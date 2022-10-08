@@ -7,12 +7,14 @@ import lombok.NoArgsConstructor;
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
+import javax.persistence.Table;
 
 @Data
 @Entity
 @AllArgsConstructor
 @NoArgsConstructor
-public class MarketLots {
+@Table(name = "market_lots")
+public class MarketLot {
     @Id
     @Column(name = "id", nullable = false)
     private Long id;
