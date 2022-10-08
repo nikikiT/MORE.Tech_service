@@ -16,11 +16,9 @@ public class UserTask {
     @Column(name = "id", nullable = false)
     private Long id;
 
-    // TODO: 08.10.2022 ПОНЯТЬ КАК СДЕЛАТЬ АССОЦИАТИВНУЮ СВЯЗБ В НЕАВТОМАТИЧЕСКИ СОЗДАЮЩЕМСЯ КЛАССЕ
     @Column(name = "user_id")
     private Long userId;
 
-    // TODO: 08.10.2022 ПОНЯТЬ КАК СДЕЛАТЬ АССОЦИАТИВНУЮ СВЯЗБ В НЕАВТОМАТИЧЕСКИ СОЗДАЮЩЕМСЯ КЛАССЕ
     @ManyToOne
     @JoinColumn(name = "task_id")
     private Task task;

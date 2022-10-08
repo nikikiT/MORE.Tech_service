@@ -13,6 +13,6 @@ public interface UserTaskRepository extends JpaRepository<UserTask, Long> {
 
     List<UserTask> findByUserId(Long userId);
 
-
+    List<UserTask> findUserTasksByIsCompleted(boolean isCompleted);
 
 }

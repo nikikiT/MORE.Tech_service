@@ -6,6 +6,8 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
+import java.time.LocalDate;
+import java.util.Date;
 import java.util.List;
 
 @RequestMapping(value = "/dream/ratings")
@@ -20,6 +22,13 @@ public class RatingController {
     @ResponseBody
     public ResponseEntity<List<Rating>> getAllUserRatings(@PathVariable String id){
         return ratingService.getAllUserRatings(Long.getLong(id));
+    }
+
+    @PostMapping()
+    public ResponseEntity<String> createNewRating(Long userId, Long ratedUserId , int score){
+        LocalDate scoreDate = LocalDate.now();
+        ratingService.createRating(new Rating(userId, ratedUserId, score, scoreDate));
+        return ResponseEntity.ok("New rating added to Ratings!");
     }
 
 

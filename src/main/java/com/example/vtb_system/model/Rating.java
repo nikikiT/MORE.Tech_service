@@ -8,6 +8,7 @@ import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import java.time.LocalDate;
 import java.util.Date;
 
 @Entity
@@ -29,7 +30,14 @@ public class Rating {
     private int score;
 
     @Column(name = "score_date")
-    private Date scoreDate;
+    private LocalDate scoreDate;
+
+    public Rating(Long userId, Long ratedUserId, int score, LocalDate scoreDate) {
+        this.userId=userId;
+        this.ratedUserId=ratedUserId;
+        this.score=score;
+        this.scoreDate=scoreDate;
+    }
 
     public Long getUserId() {
         return userId;
@@ -55,11 +63,11 @@ public class Rating {
         this.score = score;
     }
 
-    public Date getScoreDate() {
+    public LocalDate getScoreDate() {
         return scoreDate;
     }
 
-    public void setScoreDate(Date scoreDate) {
+    public void setScoreDate(LocalDate scoreDate) {
         this.scoreDate = scoreDate;
     }
 

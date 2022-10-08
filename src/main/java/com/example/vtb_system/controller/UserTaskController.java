@@ -22,6 +22,11 @@ public class UserTaskController {
         return userTaskService.getAllUserTasks(Long.getLong(id));
     }
 
+    @GetMapping()
+    public ResponseEntity<List<UserTask>> getAllUserTasksCompleted(){
+        return ResponseEntity.ok(userTaskService.getAllUserTasksCompleted());
+    }
+
 
     /*
     @PostMapping("/{id}")

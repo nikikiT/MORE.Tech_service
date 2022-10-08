@@ -22,4 +22,12 @@ public class UserTaskService {
         ratings = userTaskRepository.findByUserId(id);
         return ResponseEntity.ok(ratings);
     }
+
+    public List<UserTask> getAllUserTasksCompleted(){
+        List<UserTask> completedTasks;
+        completedTasks = userTaskRepository.findUserTasksByIsCompleted(true);
+        return completedTasks;
+    }
+
+
 }
