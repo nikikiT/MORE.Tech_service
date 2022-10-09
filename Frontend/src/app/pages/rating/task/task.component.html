@@ -1,0 +1,15 @@
+<mat-card class="task-card">
+  <div class="progress-container">
+
+  <h5>{{getTitleTask()}}</h5>
+  <mat-progress-bar  mode="determinate" [value]="(employeeTask.factCompleted/employeeTask.task.max) * 100 ">
+
+  </mat-progress-bar>
+  <div style="display: flex; justify-content: end">
+        Осталось {{employeeTask.task.max - employeeTask.factCompleted}}
+  </div>
+  </div>
+  <div class="cost-container">
+   <span class="cost">10 <mat-icon style="font-size: 17px; height: 17px">monetization_on</mat-icon></span>
+  </div>
+</mat-card>

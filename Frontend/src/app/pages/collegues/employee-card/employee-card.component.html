@@ -1,0 +1,27 @@
+<div style="display: flex" class="card-content">
+  <mat-card class="employee-card">
+    <h4>{{employee.name}}</h4>
+    <div>
+      <div style="width: 150px">
+        <span style="padding: 5px">{{average.toFixed(2)}}</span>
+        <app-star-rating
+          [rating]="4"
+          [starCount]="5"
+          [disabled]="disabled"
+          (ratingUpdated)="onRatingChanged($event)">
+        </app-star-rating>
+
+      </div>
+      <span style="margin: 5px 0 0" *ngIf="disabled">
+          Ваша оценка - {{score}}
+      </span>
+    </div>
+
+  </mat-card>
+  <mat-card style="width:47px; display: grid;background-color: darkblue">
+    <mat-icon style="color:gold; font-size: 50px; width: 47px; height: 50px">monetization_on</mat-icon>
+    <span style="margin:auto">{{getStarsByAverage()}}</span>
+  </mat-card>
+
+</div>
+

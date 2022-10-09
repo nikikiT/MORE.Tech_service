@@ -1,0 +1,44 @@
+/* You can add global styles to this file, and also import other style files */
+
+@font-face {
+  font-family: Zurich;
+  src: url(./assets/zurichbdexbtrusbyme_bold.otf);
+  font-weight: normal;
+}
+
+html, body { height: 100%; }
+body {
+  margin: 0;
+  font-family: Zurich, monospace!important;
+  background-image: url('assets/background.jpg');
+}
+
+.container{
+  background-color: transparent;
+}
+
+.mat-tab-links{
+  justify-content: space-around;
+}
+
+
+.mat-tab-link{
+  max-width: 200px;
+  height: 60px!important;
+}
+.mat-card, h1,h2,h3,h4,h5,h6, .mat-tab-link{
+
+  font-family: Zurich, sans-serif!important;
+  font-weight: 70;
+}
+
+.mat-tab-link:first-child{
+  width: 500px;
+  max-width: 500px;
+}
+
+.mat-tab-link:last-child{
+  width: 250px;
+  min-width: 200px;
+
+}

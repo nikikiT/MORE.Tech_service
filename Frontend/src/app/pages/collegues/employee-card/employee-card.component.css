@@ -1,0 +1,14 @@
+.employee-card{
+  max-width: 600px;
+  width: 600px;
+  margin: 0 10px;
+  background-color: darkblue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.card-content{
+  margin: 50px auto;
+  display: flex;
+  justify-content: center;
+}

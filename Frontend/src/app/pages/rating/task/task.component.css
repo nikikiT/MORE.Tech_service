@@ -1,0 +1,18 @@
+.task-card{
+  max-width: 600px;
+  margin: 20px auto;
+  background-color: darkblue;
+  display: flex;
+  justify-content: space-between;
+}
+
+.progress-container{
+  width: 500px;
+}
+
+.cost-container{
+  margin: auto;
+}
+
+
+

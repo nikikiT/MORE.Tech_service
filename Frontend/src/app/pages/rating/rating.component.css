@@ -1,0 +1,6 @@
+.status-card{
+  max-width: 700px;
+  margin: 20px auto;
+  background-color: #29388b;
+  justify-content: space-between;
+}

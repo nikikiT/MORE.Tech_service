@@ -1,0 +1,22 @@
+<div class="container">
+
+<div *ngIf="isLoading()" class="nav-container">
+  <nav mat-tab-nav-bar  [color]="'accent'" style="background-color: transparent" mat-align-tabs="start">
+    <a style="width: 70%; display: -moz-box;display: -webkit-box" mat-tab-link [routerLink]="''" >
+      <img src="assets/logo.png" width="100px" height="35px" style="margin: 10px 0"/>
+    </a>
+    <a mat-tab-link *ngFor="let link of links"
+             [routerLink]="link.path" >
+      {{link.label}}
+    </a>
+    <a mat-tab-link >
+      <mat-icon style="margin: 0 5px">account_circle</mat-icon>
+      <div>
+      <span style="font-size: 14px">Имя Фамилия</span><br/>
+      <small>Баланс: 5<mat-icon style="font-size: 10px; height: 10px">monetization_on</mat-icon></small>
+      </div>
+    </a>
+  </nav>
+</div>
+  <router-outlet></router-outlet>
+</div>
